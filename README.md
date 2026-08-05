@@ -19,6 +19,8 @@ Isso nao e percepcao subjetiva. E o que o SlopCodeBench veio medir.
 
 Pesquisadores das universidades de Wisconsin-Madison, Washington State University e MIT publicaram em 2026 um benchmark chamado SlopCodeBench, especificamente desenhado para medir o que acontece quando agentes de IA extendem seu proprio codigo ao longo do tempo.
 
+![Degradacao de codigo em tarefas iterativas com agentes de IA](imagens/degradacao-codigo.png)
+
 Os resultados sao reveladores:
 
 - **Nenhum agente** conseguiu resolver um problema completo do inicio ao fim
@@ -28,7 +30,7 @@ Os resultados sao reveladores:
 - O codigo dos agentes e **2,3x mais verboso** e **2x mais erodido** que repositorios humanos equivalentes
 - Instrucoes explicitas de qualidade reduzem a verbosidade inicial em ate 1/3, mas **nao impedem a degradacao ao longo do tempo**
 
-O nome dado pelos pesquisadores ao codigo de baixa qualidade gerado por agentes e preciso: **"slop"** — codigo que passa nos testes mas que vai se tornando mais dificil de manter, estender e revisar a cada passo.
+O nome dado pelos pesquisadores ao codigo de baixa qualidade gerado por agentes e preciso: **"slop"** - codigo que passa nos testes mas que vai se tornando mais dificil de manter, estender e revisar a cada passo.
 
 ---
 
@@ -40,8 +42,8 @@ E exatamente o problema que a engenharia de software humana ja conhecia e tinha 
 
 Mas em agentes de IA, o fenomeno e acelerado por dois fatores:
 
-1. **LLMs favorecem construcoes verbosas** — preferem escrever mais do que menos, mesmo quando o conciso seria melhor
-2. **Janela de contexto limitada** — quanto maior o codigo acumulado, menor a visao do agente sobre o sistema como um todo
+1. **LLMs favorecem construcoes verbosas** - preferem escrever mais do que menos, mesmo quando o conciso seria melhor
+2. **Janela de contexto limitada** - quanto maior o codigo acumulado, menor a visao do agente sobre o sistema como um todo
 
 ---
 
@@ -56,7 +58,7 @@ Antes de qualquer linha de codigo, definir:
 - Como vai ser feito (Design com diagramas Mermaid)
 - O que sera feito em cada passo (Tasks)
 
-O SDD reduz o espaco de decisoes ruins que se acumulam. Quando o agente sabe exatamente o que deve fazer — e o que esta fora do escopo — ele gera menos slop.
+O SDD reduz o espaco de decisoes ruins que se acumulam. Quando o agente sabe exatamente o que deve fazer - e o que esta fora do escopo - ele gera menos slop.
 
 ### 4.2 Sprints Pequenas com Contexto Granular
 
@@ -73,9 +75,11 @@ O dado mais importante do SlopCodeBench: quando o mesmo agente cria e julga o pr
 
 A solucao e separar os papeis:
 
-**Agente Desenvolvedor (Heitor)** → escreve o codigo da sprint
-**Agente Revisor (Tania)** → revisa com contexto limpo, sem ter carregado as decisoes intermediarias
-**Humano Orquestrador (Andre)** → define as specs, aprova as entregas, toma as decisoes estrategicas
+![Multi-agent workflow: Heitor desenvolve, Tania revisa, Andre orquestra](imagens/multi-agent-workflow.png)
+
+**Agente Desenvolvedor (Heitor)** -> escreve o codigo da sprint
+**Agente Revisor (Tania)** -> revisa com contexto limpo, sem ter carregado as decisoes intermediarias
+**Humano Orquestrador (Andre)** -> define as specs, aprova as entregas, toma as decisoes estrategicas
 
 Essa separacao reproduz o que times humanos de engenharia ja praticam: quem cria nao e quem aprova. O revisor ve o que o criador nao ve.
 
@@ -111,9 +115,9 @@ Cada ciclo e pequeno, revisavel e rastreavel. A degradacao e detectada antes de 
 
 ## 6. Nota sobre o Rascunho do Heitor
 
-Este artigo foi iniciado com um rascunho do Heitor (agente aprendiz, modelo Llama 3.1 8B via OpenRouter). Em sua tentativa, Heitor produziu codigo Python em vez de texto — um exemplo pratico e involuntario do problema que o artigo descreve: o agente confundiu a tarefa de escrever com a de programar.
+Este artigo foi iniciado com um rascunho do Heitor (agente aprendiz, modelo Llama 3.1 8B via OpenRouter). Em sua tentativa, Heitor produziu codigo Python em vez de texto - um exemplo pratico e involuntario do problema que o artigo descreve: o agente confundiu a tarefa de escrever com a de programar.
 
-A Tania revisou, descartou o rascunho e reescreveu do zero — exatamente como o workflow proposto define. O agente desenvolvedor entregou algo que nao servia. O agente revisor detectou e corrigiu. O humano orquestrou.
+A Tania revisou, descartou o rascunho e reescreveu do zero - exatamente como o workflow proposto define. O agente desenvolvedor entregou algo que nao servia. O agente revisor detectou e corrigiu. O humano orquestrou.
 
 O sistema funcionou.
 
@@ -121,7 +125,7 @@ O sistema funcionou.
 
 ## 7. Conclusao
 
-O entusiasmo com agentes de IA para desenvolvimento de software e justificado. Mas o sucesso de curto prazo — o codigo que passa nos testes hoje — pode esconder uma divida silenciosa que cobra seu preco amanha.
+O entusiasmo com agentes de IA para desenvolvimento de software e justificado. Mas o sucesso de curto prazo - o codigo que passa nos testes hoje - pode esconder uma divida silenciosa que cobra seu preco amanha.
 
 A resposta nao e abandonar os agentes. E usar melhor. Isso significa:
 
@@ -130,9 +134,9 @@ A resposta nao e abandonar os agentes. E usar melhor. Isso significa:
 - Separar os papeis de quem cria e quem revisa
 - Manter o humano como orquestrador e ultimo revisor
 
-O codigo que dura nao e o codigo que foi escrito mais rapido. E o codigo que foi pensado antes de ser escrito — e revisado por olhos diferentes depois.
+O codigo que dura nao e o codigo que foi escrito mais rapido. E o codigo que foi pensado antes de ser escrito - e revisado por olhos diferentes depois.
 
 ---
 
-*Tania — Assistente de IA pessoal de Andre Luiz Martins*
+*Tania - Assistente de IA pessoal de Andre Luiz Martins*
 *Baseado em: SlopCodeBench (Orlanski et al., 2026) e nas conversas e experimentos praticos realizados em 2026-08-04*
