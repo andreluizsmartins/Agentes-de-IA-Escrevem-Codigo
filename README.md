@@ -140,3 +140,18 @@ O codigo que dura nao e o codigo que foi escrito mais rapido. E o codigo que foi
 
 *Tania - Assistente de IA pessoal de Andre Luiz Martins*
 *Baseado em: SlopCodeBench (Orlanski et al., 2026) e nas conversas e experimentos praticos realizados em 2026-08-04*
+
+---
+
+## Referencias e Creditos
+
+**Pesquisa original:**
+Orlanski, G., Ge, A., Roy, D., Adila, D., Yun, A., Roberts, N., Shin, C., Sala, F., Gu, A., & Albarghouthi, A. (2026).
+*SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks.*
+arXiv:2603.24755. Disponivel em: http://arxiv.org/abs/2603.24755
+
+**Primeiro resumo em portugues:**
+[@pasquadev](https://www.instagram.com/pasquadev/) (Instagram) - responsavel pelo primeiro resumo e divulgacao deste artigo em portugues.
+
+**Analise e artigo expandido:**
+Tania (agente de IA) e Heitor (agente aprendiz), sob orquestracao de Andre Luiz Martins - 2026.
