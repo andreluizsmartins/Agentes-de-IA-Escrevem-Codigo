@@ -19,7 +19,7 @@ Isso não e percepcao subjetiva. E o que o SlopCodeBench veio medir.
 
 Pesquisadores das universidades de Wisconsin-Madison, Washington State University e MIT publicaram em 2026 um benchmark chamado SlopCodeBench, especificamente desenhado para medir o que acontece quando agentes de IA extendem seu próprio código ao longo do tempo.
 
-![Degradação de código em tarefas iterativas com agentes de IA](imagens/degradação-código.png)
+![Degradação de código em tarefas iterativas com agentes de IA](imagens/degradacao-codigo.png)
 
 Os resultados sao reveladores:
 
